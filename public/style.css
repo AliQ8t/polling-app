@@ -1,0 +1,262 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #00d8ff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+form {
+  margin-bottom: 30px;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00d8ff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px 5px 5px 0;
+}
+
+button:hover {
+  background-color: #00b4cc;
+}
+
+.poll {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.poll h3 {
+  margin-top: 0;
+  color: #00d8ff;
+}
+
+.poll p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.result-bar {
+  background-color: #333;
+  border-radius: 4px;
+  margin: 5px 0;
+  overflow: hidden;
+}
+
+.result-fill {
+  background-color: #00d8ff;
+  height: 20px;
+  text-align: right;
+  padding-right: 5px;
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"], input[type="date"] {
+    width: 100%;
+  }
+}
+
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.removeBtn {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  background-color: #dd2222;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  form, .poll {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  input[type="text"], input[type="date"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    margin-top: 10px;
+  }
+
+  .option-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 12px;
+  }
+
+  .removeBtn {
+    background-color: #ff5555;
+    padding: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .poll h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-bar {
+    height: 18px;
+  }
+
+  .result-fill {
+    font-size: 0.9rem;
+    padding-right: 6px;
+  }
+}
+
+canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+
+#pollApp {
+  display: none;
+}
+
+#authContainer {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#authContainer input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: white;
+}
+
+#authContainer button {
+  width: 48%;
+}
+
+#authStatus {
+  color: #ccc;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.voter-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #eee;
+}
+
+.voter-table th,
+.voter-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #333;
+}
+
+.voter-table th {
+  background-color: #262626;
+  color: #00d8ff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.voter-table tr:nth-child(even) {
+  background-color: #202020;
+}
+
+#pollsScrollContainer {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: #111;
+  border-radius: 10px;
+}

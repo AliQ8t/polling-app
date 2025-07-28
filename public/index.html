@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polling App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id="authContainer">
+    <h2>Login or Register</h2>
+    <input type="text" id="authUsername" placeholder="Username" required>
+    <input type="password" id="authPassword" placeholder="Password" required>
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+    <p id="authStatus"></p>
+  </div>
+
+  <div id="pollApp" style="display: none;">
+    <div style="text-align: right;">
+  <button onclick="logout()" style="background-color: #ff4444; color: white; font-weight: bold;">Logout</button>
+</div>
+
+    <h1>Create a Poll</h1>
+    <form id="createPollForm">
+      <input type="text" id="pollTitle" placeholder="Poll title" required><br>
+      <div id="optionsContainer">
+        <div class="option-wrapper">
+          <input type="text" class="pollOption" placeholder="Option 1" required>
+        </div>
+        <div class="option-wrapper">
+          <input type="text" class="pollOption" placeholder="Option 2" required>
+        </div>
+      </div>
+      <button type="button" onclick="addOption()">+ Add Option</button><br>
+      <label for="pollDeadline">Deadline (optional):</label><br>
+      <input type="date" id="pollDeadline"><br><br>
+      <button type="submit">Create Poll</button>
+    </form>
+
+    <h2>Polls</h2>
+    <button onclick="resetVotes()">Reset All Votes</button>
+    <div id="pollsScrollContainer" style="max-height: 900px; overflow-y: auto;">
+    <div id="pollsContainer"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
